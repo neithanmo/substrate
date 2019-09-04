@@ -1014,6 +1014,7 @@ impl<T: Trait> SignedExtension for CheckNonce<T> {
 			provides,
 			longevity: TransactionLongevity::max_value(),
 			propagate: true,
+			even: false,
 		})
 	}
 }

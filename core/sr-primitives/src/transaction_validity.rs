@@ -83,6 +83,12 @@ pub struct ValidTransaction {
 	/// including in blocks that are authored on the current node, but will
 	/// never be sent to other peers.
 	pub propagate: bool,
+
+	/// A flag indicating that the sender has an even address
+	/// 
+	/// Even transactions should be storage in the pool's queue2 
+	/// otherwise, It is going to be storaged in queue1
+	pub even: bool,
 }
 
 impl Default for ValidTransaction {
@@ -93,6 +99,7 @@ impl Default for ValidTransaction {
 			provides: vec![],
 			longevity: TransactionLongevity::max_value(),
 			propagate: true,
+			even: false,
 		}
 	}
 }
@@ -108,6 +115,7 @@ impl ValidTransaction {
 			provides: { self.provides.append(&mut other.provides); self.provides },
 			longevity: self.longevity.min(other.longevity),
 			propagate: self.propagate && other.propagate,
+			even: self.even && other.even,
 		}
 	}
 }
@@ -122,9 +130,10 @@ impl Decode for TransactionValidity {
 				let provides = Vec::decode(value)?;
 				let longevity = TransactionLongevity::decode(value)?;
 				let propagate = bool::decode(value).unwrap_or(true);
+				let even = bool::decode(value).unwrap_or(false);
 
 				Ok(TransactionValidity::Valid(ValidTransaction {
-					priority, requires, provides, longevity, propagate,
+					priority, requires, provides, longevity, propagate, even,
 				}))
 			},
 			2 => Ok(TransactionValidity::Unknown(i8::decode(value)?)),
@@ -149,6 +158,7 @@ mod tests {
 			provides: vec![vec![4, 5, 6]],
 			longevity: 42,
 			propagate: true,
+			even: false,
 		})));
 	}
 

@@ -524,6 +524,7 @@ impl<T: Trait> srml_support::unsigned::ValidateUnsigned for Module<T> {
 				provides: vec![(current_session, authority_id).encode()],
 				longevity: TransactionLongevity::max_value(),
 				propagate: true,
+				even: false,
 			})
 		}
 
