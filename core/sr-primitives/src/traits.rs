@@ -761,6 +761,11 @@ pub trait Extrinsic: Sized {
 	/// 2. Unsigned Transactions (no signature; represent "system calls" or other special kinds of calls)
 	/// 3. Signed Transactions (with signature; a regular transactions with known origin)
 	fn new(_call: Self::Call, _signed_data: Option<Self::SignaturePayload>) -> Option<Self> { None }
+
+	/// Is this `Extrinsic`'s origin and even number?
+	/// 
+	/// It is valid only for signed transactions, otherwise it should return None
+	fn is_even(&self) -> Option<bool> { None }
 }
 
 /// Extract the hashing type for a block.
