@@ -104,6 +104,7 @@ members = [
 	"node-template",
 	"subkey",
 	"test-utils/chain-spec-builder",
+	"test",
 ]
 
 [badges]
