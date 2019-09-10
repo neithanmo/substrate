@@ -1,3 +1,10 @@
+[package]
+authors = ['Parity Technologies <admin@parity.io>']
+build = 'build.rs'
+edition = '2018'
+name = 'utxo'
+version = '1.0.0'
+
 [profile.release]
 panic = 'unwind'
 
@@ -7,13 +14,6 @@ vergen = '3'
 [[bin]]
 name = 'utxo'
 path = 'src/main.rs'
-
-[package]
-authors = ['Parity Technologies <admin@parity.io>']
-build = 'build.rs'
-edition = '2018'
-name = 'utxo'
-version = '1.0.0'
 
 [dependencies]
 error-chain = '0.12'
@@ -25,60 +25,23 @@ parity-codec = '3.2'
 parking_lot = '0.7.1'
 tokio = '0.1'
 trie-root = '0.12.0'
+sr-primitives = {path = "../core/sr-primitives", default-features = false }
+substrate-basic-authorship = {path = "../core/basic-authorship", default-features = false }
+substrate-consensus-aura = {path = "../core/consensus/aura", default-features = false }
+primitives = { package = "substrate-primitives",  path = "../core/primitives", default-features = false }
+runtime_io = { package = "sr-io", path = "../core/sr-io", default-features = false }
+substrate-cli = { path = "../core/cli"}
+substrate-network = { path = "../core/network"}
+substrate-inherents = { path = "../core/inherents"}
+substrate-transaction-pool = { package="substrate-transaction-pool", path = "../core/transaction-pool"}
+substrate-service = { path = "../core/service"}
+substrate-executor = { path = "../core/executor"}
+substrate-client = { path = "../core/client"}
+utxo-runtime = {path = "runtime"}
+ctrlc = { version = "3.0", features = ["termination"] }
 
-[dependencies.basic-authorship]
-git = 'https://github.com/neithanmo/substrate.git'
-package = 'substrate-basic-authorship'
-#rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
+[workspace]
 
-[dependencies.consensus]
-git = 'https://github.com/neithanmo/substrate.git'
-package = 'substrate-consensus-aura'
-#rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
 
-[dependencies.ctrlc]
-features = ['termination']
-version = '3.0'
 
-[dependencies.inherents]
-git = 'https://github.com/neithanmo/substrate.git'
-package = 'substrate-inherents'
-#rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
 
-[dependencies.network]
-git = 'https://github.com/neithanmo/substrate.git'
-package = 'substrate-network'
-#rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
-
-[dependencies.utxo-runtime]
-path = 'runtime'
-
-[dependencies.primitives]
-git = 'https://github.com/neithanmo/substrate.git'
-package = 'substrate-primitives'
-#rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
-
-[dependencies.sr-io]
-git = 'https://github.com/neithanmo/substrate.git'
-#rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
-
-[dependencies.substrate-cli]
-git = 'https://github.com/neithanmo/substrate.git'
-#rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
-
-[dependencies.substrate-client]
-git = 'https://github.com/neithanmo/substrate.git'
-#rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
-
-[dependencies.substrate-executor]
-git = 'https://github.com/neithanmo/substrate.git'
-#rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
-
-[dependencies.substrate-service]
-git = 'https://github.com/neithanmo/substrate.git'
-#rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
-
-[dependencies.transaction-pool]
-git = 'https://github.com/neithanmo/substrate.git'
-package = 'substrate-transaction-pool'
-##rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'

@@ -6,55 +6,55 @@ version = '1.0.0'
 
 [dependencies.aura]
 default_features = false
-git = 'https://github.com/paritytech/substrate.git'
+git = 'https://github.com/neithanmo/substrate.git'
 package = 'srml-aura'
 rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
 
 [dependencies.balances]
 default_features = false
-git = 'https://github.com/paritytech/substrate.git'
+git = 'https://github.com/neithanmo/substrate.git'
 package = 'srml-balances'
 rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
 
 [dependencies.client]
 default_features = false
-git = 'https://github.com/paritytech/substrate.git'
+git = 'https://github.com/neithanmo/substrate.git'
 package = 'substrate-client'
 rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
 
 [dependencies.consensus]
 default_features = false
-git = 'https://github.com/paritytech/substrate.git'
+git = 'https://github.com/neithanmo/substrate.git'
 package = 'srml-consensus'
 rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
 
 [dependencies.consensus-aura]
 default_features = false
-git = 'https://github.com/paritytech/substrate.git'
+git = 'https://github.com/neithanmo/substrate.git'
 package = 'substrate-consensus-aura-primitives'
 rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
 
 [dependencies.consensus_authorities]
 default-features = false
-git = 'https://github.com/paritytech/substrate.git'
+git = 'https://github.com/neithanmo/substrate.git'
 package = 'substrate-consensus-authorities'
 rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
 
 [dependencies.executive]
 default_features = false
-git = 'https://github.com/paritytech/substrate.git'
+git = 'https://github.com/neithanmo/substrate.git'
 package = 'srml-executive'
 rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
 
 [dependencies.indices]
 default_features = false
-git = 'https://github.com/paritytech/substrate.git'
+git = 'https://github.com/neithanmo/substrate.git'
 package = 'srml-indices'
 rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
 
 [dependencies.offchain-primitives]
 default-features = false
-git = 'https://github.com/paritytech/substrate.git'
+git = 'https://github.com/neithanmo/substrate.git'
 package = 'substrate-offchain-primitives'
 rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
 
@@ -65,25 +65,25 @@ version = '3.5'
 
 [dependencies.primitives]
 default_features = false
-git = 'https://github.com/paritytech/substrate.git'
+git = 'https://github.com/neithanmo/substrate.git'
 package = 'substrate-primitives'
 rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
 
 [dependencies.rstd]
 default_features = false
-git = 'https://github.com/paritytech/substrate.git'
+git = 'https://github.com/neithanmo/substrate.git'
 package = 'sr-std'
 rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
 
 [dependencies.runtime-io]
 default_features = false
-git = 'https://github.com/paritytech/substrate.git'
+git = 'https://github.com/neithanmo/substrate.git'
 package = 'sr-io'
 rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
 
 [dependencies.runtime-primitives]
 default_features = false
-git = 'https://github.com/paritytech/substrate.git'
+git = 'https://github.com/neithanmo/substrate.git'
 package = 'sr-primitives'
 rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
 
@@ -101,31 +101,31 @@ version = '1.0'
 
 [dependencies.sudo]
 default_features = false
-git = 'https://github.com/paritytech/substrate.git'
+git = 'https://github.com/neithanmo/substrate.git'
 package = 'srml-sudo'
 rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
 
 [dependencies.support]
 default_features = false
-git = 'https://github.com/paritytech/substrate.git'
+git = 'https://github.com/neithanmo/substrate.git'
 package = 'srml-support'
 rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
 
 [dependencies.system]
 default_features = false
-git = 'https://github.com/paritytech/substrate.git'
+git = 'https://github.com/neithanmo/substrate.git'
 package = 'srml-system'
 rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
 
 [dependencies.timestamp]
 default_features = false
-git = 'https://github.com/paritytech/substrate.git'
+git = 'https://github.com/neithanmo/substrate.git'
 package = 'srml-timestamp'
 rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
 
 [dependencies.version]
 default_features = false
-git = 'https://github.com/paritytech/substrate.git'
+git = 'https://github.com/neithanmo/substrate.git'
 package = 'sr-version'
 rev = 'f2f2994822f4331291597e341798fb6271bb6ef4'
 
